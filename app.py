@@ -9,10 +9,10 @@ pipe=pickle.load(open("bank_fraud_pipeline.pkl","rb"))
 
 
 with st.form(key='form'):
-    transaction_amount=st.number_input(label="enter transaction_amount",placeholder=None)
+    transaction_amount=st.number_input(label="enter transaction_amount")
     country=st.text_input(label="enter country")
     corporation=st.text_input(label="enter corporation")
-    Age=st.number_input(label="enter age",placeholder=None)
+    Age=st.number_input(label="enter age")
     gender=st.selectbox('select gender',('M','F'))
     st.write('You selected:',gender)
     submit_button = st.form_submit_button(label='Result')
