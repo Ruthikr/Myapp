@@ -5,7 +5,7 @@ import pickle
 st.title("**Welcome To My Website**")
 st.write("Enter the customer details")
 st.write("the model will predict whether they are fraud or not")
-pipe=pickle.load(open("/content/bank_fraud_pipeline.pkl","rb"))
+pipe=pickle.load(open("bank_fraud_pipeline.pkl","rb"))
 
 
 with st.form(key='form'):
