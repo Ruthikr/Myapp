@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import pickle
-st.title("**Welcome**")
-st.write("Enter the details")
+st.title("Enter the transaction details")
 st.write("The model will predict whether they are fraud or not")
 pipe=pickle.load(open("bank_fraud_pipeline.pkl","rb"))
 
