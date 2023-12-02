@@ -22,6 +22,7 @@ user_input=np.array([transaction_amount,country,corporation,Age,gender],dtype=ob
 result=pipe.predict(user_input)
 if submit_button:
     if result[0]==1:
-        st.title("**fraud**")
+        label=" **Fraud** "
+        st.error(label)
     else:
-        st.title("**not fraud**")
+        st.success("**not fraud**")
