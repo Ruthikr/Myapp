@@ -20,10 +20,9 @@ with st.form(key='form'):
 
 user_input=np.array([transaction_amount,country,corporation,Age,gender],dtype=object).reshape(1,5)
 result=pipe.predict(user_input)
-if st.form !=null:
-    if submit_button:
-        if result[0]==1:
-            label=" **Fraud** "
-            st.error(label)
-        else:
-            st.success("**not fraud**")
+if submit_button:
+    if result[0]==1:
+        label=" **Fraud** "
+        st.error(label)
+    else:
+        st.success("**not fraud**")
