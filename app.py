@@ -1,7 +1,14 @@
 import streamlit as st
+from streamlit.components.v1 import html
 import pandas as pd
 import numpy as np
 import pickle
+
+
+js="""
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6127776536778995"
+     crossorigin="anonymous"></script>
+"""
 st.set_page_config(layout="wide")
 st.title("Enter the transaction details")
 st.write("The model will predict whether they are fraud or not")
@@ -26,3 +33,4 @@ if submit_button:
         st.error(label)
     else:
         st.success("**not fraud**")
+html(js) 
